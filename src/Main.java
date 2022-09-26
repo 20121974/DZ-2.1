@@ -12,6 +12,7 @@ public class Main {
         human artem = new human("Артем", "Москва", 27, "директора по развитию бизнеса");
         artem.outputWelcomeMessage();
 
-
+        human vladimir = new human("Владимир", "Казань", 21, "безработный");
+        vladimir.outputWelcomeMessage();
     }
 }
