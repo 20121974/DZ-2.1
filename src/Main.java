@@ -14,5 +14,21 @@ public class Main {
 
         human vladimir = new human("Владимир", "Казань", 21, "безработный");
         vladimir.outputWelcomeMessage();
+
+        flower roza = new flower("Роза обыкновенная", null, "Голландия", 35.59, 0);
+        roza.outputMessage();
+
+        flower chrysanthemum = new flower("Хризантема", null, null, 15, 5);
+        chrysanthemum.outputMessage();
+
+        flower pion = new flower("Пион", null, "Англия", 69.9, 1);
+        pion.outputMessage();
+
+        flower gypsophila = new flower("Гипсофила", null, "Турция", 19.5, 10);
+        gypsophila.outputMessage();
+
+
     }
+
+
 }
