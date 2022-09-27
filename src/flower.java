@@ -44,10 +44,10 @@ public class flower {
     }
 
     public String getCountry() {
-        if (country == null && country.isBlank() && country.isEmpty()) {
-            this.country = "Россия";
-        }else {
+        if (country != null && !country.isBlank() && !country.isEmpty()) {
             this.country = country;
+        }else {
+            this.country = "Россия";
         }
         return country;
     }
