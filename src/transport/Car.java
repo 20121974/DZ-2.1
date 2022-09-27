@@ -127,7 +127,7 @@ public class Car {
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
-    public void setaSignOfSummerOrWinterTires(String aSignOfSummerOrWinterTires) {
+    public void setASignOfSummerOrWinterTires(String aSignOfSummerOrWinterTires) {
         this.aSignOfSummerOrWinterTires = aSignOfSummerOrWinterTires;
     }
 
@@ -138,4 +138,20 @@ public class Car {
         getRegistrationNumber() + ", количество мест " + getNumberOfSeats() + ", признак летняя или зимняя резина " +
                 getaSignOfSummerOrWinterTires());
     }
+    public void changeTiresForSeasonalOnes (String aSignOfSummerOrWinterTires){
+        if (aSignOfSummerOrWinterTires == "летняя"){
+            this.aSignOfSummerOrWinterTires = "зимняя";
+        }else {
+            this.aSignOfSummerOrWinterTires = "летняя";
+        }
+    }
+    public static String checkingTheCorrectSpellingOfTheCarNumber (String registrationNumber){
+        if (registrationNumber.length() != 7 && !registrationNumber.contains("х000хх000")){
+            registrationNumber = "А177АА177";
+        }else {
+            registrationNumber = registrationNumber;
+        }
+        return registrationNumber;
+    }
+
 }
