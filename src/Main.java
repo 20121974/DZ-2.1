@@ -14,15 +14,20 @@ public class Main {
         human vladimir = new human("Владимир", "Казань", 21, "безработный");
         vladimir.outputWelcomeMessage();
 
-        Car lada = new Car("Lada", "Grande", 2015, "Россия", "желтый", 1.7);
+        Car lada = new Car("Lada", "Grande", 2015, "Россия", "желтый", 1.7,
+                "ручная", "седан", "Б177ББ177", 4, "летняя");
         lada.outputMessage();
-        Car audi = new Car("Audi", "A8 50 L TDI quattro", 2020, "Германия", "черный", 3.0);
+        Car audi = new Car("Audi", "A8 50 L TDI quattro", 2020, "Германия", "черный", 3.0,
+                "автоматическая", "седан", "В178ВВ178", 5, "зимняя");
         audi.outputMessage();
-        Car bmv = new Car("BMW", "Z8", 2021, "Германия", "черный", 3.0);
+        Car bmv = new Car("BMW", "Z8", 2021, "Германия", "черный", 3.0,
+                "автоматическая", "хэчбек", "Е178ВВ178", 5, "летняя");
         bmv.outputMessage();
-        Car kia = new Car("Kia", "Sportage 4 поколение", 2018, "Южная Корея", "красный", 2.4);
+        Car kia = new Car("Kia", "Sportage 4 поколение", 2018, "Южная Корея", "красный", 2.4,
+                "ручная", "седан", "Д177ДД177", 4, "зимняя");
         kia.outputMessage();
-        Car hyundai = new Car("Hyundai", "Avante", 2016, "Южная Корея", "оранжевый", 1.6);
+        Car hyundai = new Car("Hyundai", "Avante", 2016, "Южная Корея", "оранжевый", 1.6,
+                "ручная", "куппе", "Г177ГГ177", 8, "зимняя");
         hyundai.outputMessage();
 
         flower roza = new flower("Роза обыкновенная", null, "Голландия", 35.59, 0);
