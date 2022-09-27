@@ -1,3 +1,5 @@
+package transport;
+
 public class Car {
     String brand;//марка автомобиля
     String model;//модель
