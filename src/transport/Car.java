@@ -1,6 +1,83 @@
 package transport;
 
 public class Car {
+
+    public class insurance {
+        private Integer insuranceValidityPeriod;//Срок действия страховки
+        private String theCostOfInsurance;//Стоимость страховки
+        private String insuranceNumber;//Номер страховки
+
+        public insurance(Integer insuranceValidityPeriod, String theCostOfInsurance, String insuranceNumber) {
+            this.insuranceValidityPeriod = insuranceValidityPeriod;
+            this.theCostOfInsurance = theCostOfInsurance;
+            this.insuranceNumber = insuranceNumber;
+        }
+        public Integer getInsuranceValidityPeriod() {
+            if (insuranceValidityPeriod == 0) {
+                System.out.println("нужно срочно ехать оформлять новую страховку");
+            } else {
+                this.insuranceValidityPeriod = insuranceValidityPeriod;
+            }
+            return insuranceValidityPeriod;
+        }
+        public String getTheCostOfInsurance() {
+            if (theCostOfInsurance == null && theCostOfInsurance.isBlank() && theCostOfInsurance.isEmpty()) {
+                this.theCostOfInsurance = "Стоимость страховки введена некорректно";
+            }else {
+                this.theCostOfInsurance = theCostOfInsurance;
+            }
+            return theCostOfInsurance;
+        }
+        public String getInsuranceNumber() {
+            if (insuranceNumber == null && insuranceNumber.isBlank() && insuranceNumber.isEmpty()) {
+                this.insuranceNumber = "Номер страховки некорректный";
+            }else {
+                this.insuranceNumber = insuranceNumber;
+            }
+            return insuranceNumber;
+        }
+        public Integer checkingTheExpirationDateOfInsurance(Integer insuranceValidityPeriod) {
+            if (insuranceValidityPeriod == 0 && insuranceValidityPeriod == null) {
+                System.out.println("нужно срочно ехать оформлять новую страховку");
+            } else {
+                this.insuranceValidityPeriod = insuranceValidityPeriod;
+            }
+            return insuranceValidityPeriod;
+        }
+        public String checkingInsuranceNumber (String insuranceNumber){
+            if (insuranceNumber.length() != 9){
+                insuranceNumber = "Номер страховки некорректный!";
+            }else {
+                insuranceNumber = insuranceNumber;
+            }
+            return insuranceNumber;
+        }
+    }
+    public class key {
+        private String remoteEngineStart;//удалённый запуск двигателя
+        private String keylessAccess;//бесключевой доступ
+
+        public key(String remoteEngineStart, String keylessAccess) {
+            this.remoteEngineStart = remoteEngineStart;
+            this.keylessAccess = keylessAccess;
+        }
+        public String getRemoteEngineStart() {
+            if (remoteEngineStart == null && remoteEngineStart.isBlank() && remoteEngineStart.isEmpty()) {
+                this.remoteEngineStart = "Ошибка";
+            }else {
+                this.remoteEngineStart = registrationNumber;
+            }
+            return remoteEngineStart;
+        }
+        public String getKeylessAccess() {
+            if (keylessAccess == null && keylessAccess.isBlank() && keylessAccess.isEmpty()) {
+                this.keylessAccess = "Ошибка";
+            }else {
+                this.keylessAccess = keylessAccess;
+            }
+            return keylessAccess;
+        }
+    }
     private String brand;//марка автомобиля
     private String model;//модель
     private int productionYear;//год выпуска
