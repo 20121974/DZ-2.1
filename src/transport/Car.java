@@ -13,26 +13,26 @@ public class Car {
             this.insuranceNumber = insuranceNumber;
         }
         public Integer getInsuranceValidityPeriod() {
-            if (insuranceValidityPeriod == 0) {
-                System.out.println("нужно срочно ехать оформлять новую страховку");
-            } else {
+            if (insuranceValidityPeriod != 0) {
                 this.insuranceValidityPeriod = insuranceValidityPeriod;
+            } else {
+                System.out.println("нужно срочно ехать оформлять новую страховку");
             }
             return insuranceValidityPeriod;
         }
         public String getTheCostOfInsurance() {
-            if (theCostOfInsurance == null && theCostOfInsurance.isBlank() && theCostOfInsurance.isEmpty()) {
-                this.theCostOfInsurance = "Стоимость страховки введена некорректно";
-            }else {
+            if (theCostOfInsurance != null && !theCostOfInsurance.isBlank() && !theCostOfInsurance.isEmpty()) {
                 this.theCostOfInsurance = theCostOfInsurance;
+            }else {
+                this.theCostOfInsurance = "Стоимость страховки введена некорректно";
             }
             return theCostOfInsurance;
         }
         public String getInsuranceNumber() {
-            if (insuranceNumber == null && insuranceNumber.isBlank() && insuranceNumber.isEmpty()) {
-                this.insuranceNumber = "Номер страховки некорректный";
-            }else {
+            if (insuranceNumber != null && !insuranceNumber.isBlank() && !insuranceNumber.isEmpty()) {
                 this.insuranceNumber = insuranceNumber;
+            }else {
+                this.insuranceNumber = "Номер страховки некорректный";
             }
             return insuranceNumber;
         }
@@ -89,8 +89,21 @@ public class Car {
     String registrationNumber;//регистрационный номер
     private int numberOfSeats;//количество мест
     String aSignOfSummerOrWinterTires;//признак летняя или зимняя резина
-
-    public Car(String brand, String model, int productionYear, String productionCountry, String color,
+    private static insurance insurance;
+    public Car.insurance getInsurance(int i, String s, String s1) {
+        return insurance;
+    }
+    public void setInsurance(Car.insurance insurance) {
+        this.insurance = insurance;
+    }
+    public Car.key getKey() {
+        return key;
+    }
+    public void setKey(Car.key key) {
+        this.key = key;
+    }
+    private key key;
+   public Car(String brand, String model, int productionYear, String productionCountry, String color,
                double engineVolume, String transmission, String bodyType, String registrationNumber, int numberOfSeats,
                String aSignOfSummerOrWinterTires) {
         this.brand = brand;
@@ -213,7 +226,8 @@ public class Car {
         ", страна производитель " + getProductionCountry() + ", цвет " + getColor() + ", объем двигателя " + getEngineVolume()
         + ", коробка передач " + getTransmission() + ", тип кузова " + getBodyType() + ", регистрационный номер " +
         getRegistrationNumber() + ", количество мест " + getNumberOfSeats() + ", признак летняя или зимняя резина " +
-                getaSignOfSummerOrWinterTires());
+        getaSignOfSummerOrWinterTires() + getInsurance(Car.insurance.insuranceValidityPeriod, Car.insurance.insuranceNumber,
+        Car.insurance.theCostOfInsurance));
     }
     public void changeTiresForSeasonalOnes (String aSignOfSummerOrWinterTires){
         if (aSignOfSummerOrWinterTires == "летняя"){
